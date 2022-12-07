@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+
+{% block title%}
+online shop
+{% endblock title%}
+
+{% block body%}
+<div class="container">
+    <h1>Online Shop</h1>
+
+    <div style="color:blue;">
+    {% for em in data%}
+     <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src=" static/img/mer2.png " alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{em.title}}</h5>
+    <p class="card-text">{{em.price}} $<br> </p>
+    <a href="/product/{{em.id}}" class="btn btn-primary">ENTER</a>
+
+  </div>
+</div>
+
+    {%endfor%}
+    </div>
+</div>
+{% endblock body%}

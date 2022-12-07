@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% block title%}
+Display Information
+{% endblock title%}
+
+{% block body%}
+   <h1 class="container"> Details page </h1>
+   <div class="container" >
+       <div class="card" style="width: 18rem;">
+  <img class="card-img-top" src=" static/img/mer2.png " alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{data.title}}</h5>
+    <p class="card-text">{{data.price}} $<br> </p>
+    <a href="/product/{{data.id}}/#" class="btn btn-primary">BUY</a>
+      <a href="/product/{{data.id}}/delete" class="btn btn-warning">DELETE</a>
+
+  </div>
+
+
+      </div>
+
+
+
+   </div>
+{% endblock body%}
